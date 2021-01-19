@@ -17,13 +17,12 @@ export default {
   name: 'App',
   setup () {
     return {
-      appstate: computed(() => Appstate)
+      appState: computed(() => Appstate)
     }
   },
   components: {
     SearchComponent
   }
-
 }
 </script>
 
