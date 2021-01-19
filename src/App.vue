@@ -1,19 +1,29 @@
 <template>
-  <img
-    alt="Vue logo"
-    src="./assets/logo.png"
-  >
-  <HelloWorld msg="VUEEEEEEE" />
+  <div class="container-fluid" />
+  <h1>
+    Mars photos
+  </h1>
+  <search-component />
+  <div class="row">
+    <results-component />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import { computed } from 'vue'
+import SearchComponent from './components/SearchComponent.vue'
+import { AppState } from './Appstate'
 export default {
   name: 'App',
+  setup () {
+    return {
+      appstate: computed(() => Appstate)
+    }
+  },
   components: {
-    HelloWorld
+    SearchComponent
   }
+
 }
 </script>
 
